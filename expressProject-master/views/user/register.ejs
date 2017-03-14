@@ -1,0 +1,68 @@
+<% include ../header %>
+<div class="register-main">
+    <div class="box">
+        <canvas></canvas>
+        <div class="title">
+            <h1>注 册</h1>
+        </div>
+        <form action="" method="post" onsubmit="return check(this);">
+            <div class="username">
+                <i class="i_username"></i>
+                <input type="text" name="nickname" id="nickname" placeholder="输入昵称" required/>
+            </div>
+            <div class="sex">
+                <i class="i_sex"></i>
+                <input type="radio" name="sex" id="sex" value="1" required/>男
+                <input type="radio" name="sex" id="sex" value="2" required/>女
+            </div>
+            <div class="age">
+                <i class="i_age"></i>
+                <input type="text" name="age" id="age" placeholder="输入年龄" required/>
+            </div>
+            <div class="birthday">
+                <i class="i_birthday"></i>
+                <input type="text" name="birthday" id="birthday" placeholder="输入生日" required/>
+            </div>
+            <div class="username">
+                <i class="i_username"></i>
+                <input type="text" name="username" id="username" placeholder="输入用户名" required/>
+            </div>
+            <div class="password">
+                <i class="i_password"></i>
+                <input type="password" name="password" id="password" placeholder="输入密码" required/>
+            </div>
+            <div class="password">
+                <i class="i_password"></i>
+                <input type="password" name="db_password" id="db_password" placeholder="确认密码" required/>
+            </div>
+            <div>
+                <input class="submit-btn" type="submit" value="注 册"/>
+            </div>
+            <div class="page-message">
+                <%= message %>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function check(form) {
+        var p1 = form.password;
+        var p2 = form.db_password;
+        if (p1.value != p2.value) {
+            p2.oninvalid();
+            return false;
+        }
+        return true;
+    }
+    window.onload = function () {
+        var p2 = document.getElementById("db_password");
+        p2.oninvalid = function () {
+            this.setCustomValidity("密码不一致，请重新输入");
+        }
+        p2.oninput = function () {
+            this.setCustomValidity("");
+        }
+    }
+
+</script>
+<% include ../footer %>

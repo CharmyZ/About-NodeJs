@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font: 14px "微软雅黑", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    padding: 25px;
+}
+
+a {
+    color: #00B7FF;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.body {
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    background-color: #EDEDED;
+}
+
+/*动画*/
+.animate {
+    -webkit-animation-duration: 1000ms;
+    -moz-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    position: absolute;
+}
+
+@-webkit-keyframes slideRightIn {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes slideRightIn {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes toBigHover {
+    0% {
+        font-size: 14px;
+        left: 0;
+        /*height:30px;*/
+        /*line-height: 30px;*/
+        padding-left: 0;
+    }
+    100% {
+        font-size: 20px;
+        left: -20px;
+        /*height:50px;*/
+        /*line-height: 50px;*/
+        padding-left: 10px;
+    }
+}
+
+/*动画效果*/
+.animation-slideRightIn {
+    -webkit-animation-name: slideRightIn;
+    -moz-animation-name: slideRightIn;
+    animation-name: slideRightIn
+}
+
+/*动画结束*/
+
+.header {
+    background-color: #000;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 0;
+}
+
+.header .content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header .content .logo {
+    width: 120px;
+    line-height: 50px;
+    font-size: 22px;
+}
+
+.main {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    height: auto;
+}
+
+.main .content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main .content ul li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    position: relative;
+}
+
+.main .content ul li:hover {
+    font-size: 20px;
+    /*height:50px;*/
+    /*line-height: 50px;*/
+    left: -20px;
+    padding-left: 10px;
+
+    animation-duration: 600ms;
+    -webkit-animation-name: toBigHover;
+    -moz-animation-name: toBigHover;
+    animation-name: toBigHover
+}
+
+.main .content ul li .original {
+    visibility: hidden;
+}
+
+.main .page-nav {
+    background-color: #EDEDED;
+    padding: 15px 0;
+}
+
+.main .page-nav:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.main .page-nav span {
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    display: block;
+    float: left;
+    border: 1px solid #000;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.main .page-nav span.active {
+    background-color: #ccc;
+}
+
+.main .page-nav span a {
+    color: #000;
+}
+
+.main .page-nav span a:hover {
+    color: red
+}
+
+.footer {
+    background-color: #000;
+    height: 150px;
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.visitNum{
+    display:block;
+    padding:15px;
+    color:#ccc;
+    font-size:14px;
+}
+
+.footer .content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+

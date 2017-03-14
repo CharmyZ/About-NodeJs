@@ -1,0 +1,442 @@
+body {
+    padding: 0;
+    margin: 0;
+    font: 14px "微软雅黑";
+    background:/* url('../images/bcg.png') repeat*/ #1b242c;
+    color:#fff;
+}
+
+/*背景效果图*/
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/*提示信息*/
+.page-message{
+    min-width:80px;
+    height:26px;
+    color:red;
+    font-size:14px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    float:right;
+}
+
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+a {
+    color: #00B7FF;
+    text-decoration: none;
+}
+
+
+/*菜单页*/
+div.menu-main{
+    position:fixed;
+    height:100%;
+    width:300px;
+    top:0 ;
+    left : 0;
+    margin-top:80px;
+}
+
+div.menu-main ul{
+    float:right;
+    min-width:110px;
+}
+
+div.menu-main ul li{
+    height:40px;
+    line-height: 40px;
+    min-width:100px;
+    text-align:center;
+}
+
+div.menu-main ul li a{
+    background: rgba(255, 255, 255, 0.12) none repeat scroll 0 0;
+    width:70px;
+    padding:9px 80px;
+    border-radius: 8px;
+    color:#fff;
+}
+div.menu-main ul li a:hover{
+    background:#EDEDED;
+    color:#2e3843;
+}
+
+/*页面头部*/
+div.header-main{
+    height:80px;
+    min-width:990px;
+    line-height: 80px;
+    padding-left:80px;
+    padding-right:180px;
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #2e3843 0%, #424d56 100%) repeat scroll 0 0;
+}
+
+/*主页*/
+div.index-main{
+    margin-left:300px;
+    padding-top:30px;
+}
+
+/*header*/
+div.header-main h1{
+    margin:0;
+    float:left;
+    width:500px;
+    text-align:center;
+}
+
+div.header-main .status{
+    float:right;
+}
+
+div.header-main .status li{
+    display:inline-block;
+    margin-right:12px;
+}
+
+/*登陆页*/
+div.login-main{
+
+}
+
+div.login-main .box{
+    margin: 65px auto 0 auto;
+    width: 430px;
+    background-color: #3f4852;
+    border-radius: 8px;
+}
+
+div.login-main .box .title{
+    display: block;
+    margin: 3px 3px 10px;
+    padding: 8px 40px;
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+div.login-main .box .title h1{
+    font-size: 100%;
+}
+
+div.login-main .box .submit-btn{
+    outline:none;
+    border: medium none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding:10px 16px;
+    width:100%;
+    height:43px;
+    margin-top:35px;
+    cursor: pointer;
+    background:rgba(0, 0, 0, 0) linear-gradient(to bottom, #7e8488 0%, #3b3b3b 50%, #1c2227) repeat scroll 0 0;
+    color:#fff;
+}
+
+div.login-main .box .submit-btn:active{
+    background:rgba(0, 0, 0, 0) linear-gradient(to bottom, #252525 0%, #49484a 50%, #7e7d7f) repeat scroll 0 0;
+    line-height:25px;
+}
+
+div.login-main .box form{
+    padding:40px;
+}
+
+div.login-main .box form .username,
+div.login-main .box form .password{
+    margin-bottom:20px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div.login-main .password input,
+div.login-main .username input{
+    display:block;
+    padding: 6px 8px 6px 50px;
+    width:100%;
+    height:44px;
+    border: 1px solid #cbcbd2;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+div.login-main form i{
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+div.login-main form i:after{
+    content: '';
+    position: absolute;
+    right: -11px;
+    top: -10px;
+    bottom: -10px;
+    width: 1px;
+    opacity: .5;
+    background-color: rgba(212,212,212,0);
+    background-image: -webkit-linear-gradient(bottom,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
+    background-image: linear-gradient(to top,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
+}
+
+div.login-main .i_username{
+    background: url("../images/icon-username.png");
+}
+
+
+div.login-main .i_password{
+    background: url("../images/icon-password.png");
+}
+
+/*注册页*/
+div.register-main{
+
+}
+
+div.register-main .box{
+    margin: 65px auto 0 auto;
+    width: 430px;
+    background-color: #3f4852;
+    border-radius: 8px;
+}
+
+div.register-main .box .title{
+    display: block;
+    margin: 3px 3px 10px;
+    padding: 8px 40px;
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+div.register-main .box .title h1{
+    font-size: 100%;
+}
+
+div.register-main .box .submit-btn{
+    outline:none;
+    border: medium none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding:10px 16px;
+    width:100%;
+    height:43px;
+    margin-top:35px;
+    cursor: pointer;
+    background:rgba(0, 0, 0, 0) linear-gradient(to bottom, #7e8488 0%, #3b3b3b 50%, #1c2227) repeat scroll 0 0;
+    color:#fff;
+}
+
+div.register-main .box .submit-btn:active{
+    background:rgba(0, 0, 0, 0) linear-gradient(to bottom, #252525 0%, #49484a 50%, #7e7d7f) repeat scroll 0 0;
+    line-height:25px;
+}
+
+div.register-main .box form{
+    padding:40px;
+}
+
+div.register-main .box form .username,
+div.register-main .box form .password{
+    margin-bottom:20px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div.register-main .password input,
+div.register-main .username input{
+    display:block;
+    padding: 6px 8px 6px 50px;
+    width:100%;
+    height:44px;
+    border: 1px solid #cbcbd2;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+div.register-main form i{
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+div.register-main form i:after{
+    content: '';
+    position: absolute;
+    right: -11px;
+    top: -10px;
+    bottom: -10px;
+    width: 1px;
+    opacity: .5;
+    background-color: rgba(212,212,212,0);
+    background-image: -webkit-linear-gradient(bottom,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
+    background-image: linear-gradient(to top,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
+}
+
+div.register-main .i_username{
+    background: url("../images/icon-username.png");
+}
+
+
+div.register-main .i_password{
+    background: url("../images/icon-password.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*按钮*/
+a.blue-btn {
+    font-family: "微软雅黑";
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 4px 17px;
+    background: -moz-linear-gradient(top, #58afd9 0%, #3a97cb);
+    background: -webkit-gradient(linear, left top, left bottom, from(#58afd9), to(#3a97cb));
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+a.blue-btn:hover {
+    background: -moz-linear-gradient(top, #78c3e4 0%, #227ab9);
+    background: -webkit-gradient(linear, left top, left bottom, from(#78c3e4), to(#227ab9));
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6), inset 0px 1px 3px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6), inset 0px 1px 3px rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6), inset 0px 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+
+/*模拟table样式*/
+.table {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.table .ul-table {
+    width: 100%;
+    display: block;
+}
+
+.table .ul-table li {
+    color: #fff;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+
+.table .table-header {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #595f65 0%, #282f36 63%, #3d464d 100%) repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 3px rgba(255, 255, 255, 0.2) inset;
+}
+
+.table .ul-table:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.table ul.table-header li {
+    border: medium none;
+    border-radius: 0;
+    font: 15px/41px "微软雅黑", sans-serif;
+    background: rgba(0, 0, 0, 0) url("../images/subnav-border.png") no-repeat scroll right center;
+    width: 93px;
+    height: 34px;
+    padding: 0 20px 6px;
+}
+
+.table ul.table-body {
+    margin-top: 2px;
+    background-color: #515c65;
+}
+
+.table ul.table-body li {
+    width: 93px;
+    height: 24px;
+    font: 15px/28px "微软雅黑", sans-serif;
+    background-color: #515c65;
+    padding: 0 20px 6px;
+}
+
+.table ul.ul-table:nth-child(even) {
+    background-color: #3f4852;
+}
+
+.table ul.ul-table:nth-child(even) li {
+    background-color: #3f4852;
+}
